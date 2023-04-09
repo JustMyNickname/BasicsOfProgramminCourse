@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <malloc.h>
 #include <stdbool.h>
+#include <assert.h>
 
 typedef struct vector {
     int *data;
@@ -25,5 +26,14 @@ bool isEmpty(vector *v);
 
 bool isFull(vector *v);
 
+int getVectorValue(vector *v, size_t i);
+
+void addElement(vector *v, int pos, int number);
+
+void deleteElement(vector *v, int pos);
+
+void pushBack(vector *v, int x);
+
+void popBack(vector *v);
 
 #endif //GITHUBPROJECT_VECTOR_H
