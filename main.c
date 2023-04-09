@@ -23,8 +23,6 @@ int main() {
 
     fillVector(&v);
 
-
-    deleteVector(v)
     outputVector(&v);
 
     printf("\n%zu\n", v.size);
