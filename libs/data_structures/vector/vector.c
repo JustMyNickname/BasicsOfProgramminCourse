@@ -52,8 +52,8 @@ int getVectorValue(vector *v, size_t i) {
 
 void addElement(vector *v, int pos, int number) {
     if (v->size < v->capacity) {
-        printf("Vector is full!");
-        return;
+        fprintf(stderr, "Vector is full!");
+        exit(1);
     }
 
     for (int i = v->size - 1; i >= pos; i--)
@@ -65,8 +65,8 @@ void addElement(vector *v, int pos, int number) {
 
 void deleteElement(vector *v, int pos) {
     if (v->size == 0) {
-        printf("Vector is empty!");
-        return;
+        fprintf(stderr, "Vector is empty!");
+        exit(1);
     }
 
     for (int i = pos; i < v->size - 1; i++)
@@ -78,6 +78,7 @@ void pushBack(vector *v, int x) {
     if (v->capacity == 0) {
         reserve(v, 1);
         v->data[v->size] = x;
+        v->size++;
     } else if (v->capacity == v->size) {
         reserve(v, v->capacity * 2);
         v->data[v->size] = x;
@@ -90,9 +91,38 @@ void pushBack(vector *v, int x) {
 
 void popBack(vector *v) {
     if (v->size == 0) {
-        printf("Vector is empty!");
-        return;
+        fprintf(stderr, "Vector is empty!");
+        exit(1);
     }
 
     v->size--;
+}
+
+int* atVector(vector *v, size_t index) {
+    if (index >= v->capacity) {
+        fprintf(stderr, "IndexError: a[%zu] is not exists", index);
+        exit(1);
+    }
+
+    int *p = v->data;
+    for (int i = 0; i < index; i++) {
+        p++;
+    }
+
+    return p;
+}
+
+int* back(vector *v) {
+    if (v->size == 0) {
+        fprintf(stderr, "Vector is empty!");
+        exit(1);
+    }
+
+    int *p = atVector(v, v->size - 1);
+
+    return p;
+}
+
+int* front(vector *v) {
+    return v->data;
 }
