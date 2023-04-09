@@ -98,7 +98,7 @@ void popBack(vector *v) {
     v->size--;
 }
 
-int* atVector(vector *v, size_t index) {
+int *atVector(vector *v, size_t index) {
     if (index >= v->capacity) {
         fprintf(stderr, "IndexError: a[%zu] is not exists", index);
         exit(1);
@@ -112,7 +112,7 @@ int* atVector(vector *v, size_t index) {
     return p;
 }
 
-int* back(vector *v) {
+int *back(vector *v) {
     if (v->size == 0) {
         fprintf(stderr, "Vector is empty!");
         exit(1);
@@ -123,6 +123,6 @@ int* back(vector *v) {
     return p;
 }
 
-int* front(vector *v) {
+int *front(vector *v) {
     return v->data;
 }

@@ -19,6 +19,7 @@ void test_atVector_notEmptyVector() {
     assert(*atVector(&v, 4) == 5);
     assert(*atVector(&v, 8) == 9);
 }
+
 void test_atVector_requestToLastElement() {
     vector v = createVector(10);
 
@@ -28,12 +29,14 @@ void test_atVector_requestToLastElement() {
 
     assert(*atVector(&v, 9) == 10);
 }
+
 void test_back_oneElementInVector() {
     vector v = createVector(1);
     v.data[0] = 1;
     v.size = 1;
     assert(*back(&v) == 1);
 }
+
 void test_front_oneElementInVector() {
     vector v = createVector(1);
     v.data[0] = 1;
