@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "GithubProject",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -39,8 +41,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "GithubProject::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-GithubProject-Debug-d29c6ea311040be995bb.json",
+					"jsonFile" : "target-GithubProject-Debug-9b15db6327fd7ef4982f.json",
 					"name" : "GithubProject",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "data_structures::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-data_structures-Debug-35879cd4b1831da30ffb.json",
+					"name" : "data_structures",
 					"projectIndex" : 0
 				}
 			]
